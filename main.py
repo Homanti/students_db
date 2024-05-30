@@ -41,7 +41,6 @@ while True:
         print(courses_db.get_all_course())
     # Показати список курсів
 
-
     elif choice == "5":
         student_id = int(input("ID Студента "))
         course_id = int(input("ID Курса "))
