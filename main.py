@@ -18,7 +18,7 @@ while True:
     choice = input("Оберіть опцію (1-7): ")
 
     if choice == "1":
-        student_name = input("Введіть ім'я студента ")
+        student_name = input("\nВведіть ім'я студента ")
         student_age = int(input("Введіть вік студента "))
 
         student_db.add_student(student_name, student_age)
@@ -26,7 +26,7 @@ while True:
     # Додавання нового студента
 
     elif choice == "2":
-        course_name = input("Назва курса ")
+        course_name = input("\nНазва курса ")
         course_instructor = input("Ім'я вчителя ")
 
         courses_db.add_course(course_name, course_instructor)
@@ -34,15 +34,17 @@ while True:
     # Додавання нового курсу
 
     elif choice == "3":
+        print()
         print(student_db.get_all_students())
     # Показати список студентів
 
     elif choice == "4":
+        print()
         print(courses_db.get_all_course())
     # Показати список курсів
 
     elif choice == "5":
-        student_id = int(input("ID Студента "))
+        student_id = int(input("\nID Студента "))
         course_id = int(input("ID Курса "))
 
         course_groups_db.add_course_groups(course_id, student_id)
@@ -51,7 +53,8 @@ while True:
     # Зареєструвати студента на курс
 
     elif choice == "6":
-        course_id = int(input("Введіть ID курса "))
+        course_id = int(input("\nВведіть ID курса "))
+        print()
 
         for i in course_groups_db.get_course_groups(course_id):
             print(student_db.get_students(i[2]))
